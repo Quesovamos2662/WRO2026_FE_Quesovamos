@@ -80,36 +80,8 @@ In the sensors department, we settled on utilising ultrasonic sensors to their f
 
 ## Obstacle program flowchart
 
+<img width="473" height="706" alt="image" src="https://github.com/user-attachments/assets/92b06526-cccd-4ed8-b62f-b08c6d17d6a1" />
 
-# MEASUREMENTS PROCESSING
-
-
-
-## Image Processing
-
-
-## Processing the walls
-
-
-
-## Processing the parking lot
-
-
-
-## Processing the obstacles
-
-
- ## Processing the lines
-
-
-
- ## Steering Decision
-
-
-## Steering formula:
-
-
-## Parking
 
 
 
