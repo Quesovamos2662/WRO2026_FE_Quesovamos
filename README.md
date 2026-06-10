@@ -83,14 +83,22 @@ It sports a flash memory of 16 MB, has 64 MB of RAM, And is able to output any v
 
 ## sensors
 
- <img width="287" height="176" alt="image" src="https://github.com/user-attachments/assets/a7a2ab79-1aaf-453d-97e2-00a93791542a" />
+ ## Ultrasonic
+
  
+<img width="259" height="194" alt="image" src="https://github.com/user-attachments/assets/518e701a-d621-406b-bfa3-8aadc2fcd178" />
 
-<img width="516" height="387" alt="image" src="https://github.com/user-attachments/assets/bcd60725-434a-4d38-abb6-d8eb72f8c5ee" />
 
 
-In the sensors department, we settled on utilising ultrasonic sensors to their full extent. Since we had to make up for not having a camera, we mounted three ultrasonic sensors onto our robot; one on its left, another on its right, and, finally, one at its front. The purpose of these sensors are to quickly detect any obstacles and walls around our car, making it so that it can frequently correct its route and efficiently complete laps.
+In the sensors department, we settled on utilising ultrasonic sensors to their full extent. Since we had to make up for not having a camera, we mounted two ultrasonic sensors on either side of our car. These will make sure to detect any nearby walls or obstacles, making our robot able to correct its route on the fly.
 
+ ## Infrared
+
+
+ <img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/c8c3e815-77bc-4a2b-96f2-f45d3433f29c" />
+
+
+ Additionally, we also mounted an infrared sensor to the front of our car to make sure there were no blind spots for obstacles. We opted to not use an ultrasonic sensor in this spot because we feared that the noise from spectators, judges, and other competitors at the competition venue would make the sensors misfire or get disrupted.
 
 ## Schematics
 
@@ -133,7 +141,6 @@ This easy-to-follow flowchart gives insight to how our car's code works in simpl
 ## Structural elements
 
 
-## Assembly instructions
 
 
 
