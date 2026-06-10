@@ -30,6 +30,13 @@ Christopher Romero: Documentator, Car builder
 
 ## Car dimensions
 
+Length: ~19cm (190mm)
+
+Height:
+
+Width: ~13cm (130mm)
+
+Weight: 
 
 ## Car pictures (labeled)
 
@@ -59,9 +66,16 @@ Our project uses a simple Ackerman steering mechanism. Since this our first time
 
 For our controller, we used a standard EV3 Lego Mindstorms Brick. Because of this, it also serves as a battery for all of the sensors that our robot utilises.
 
+It sports a flash memory of 16 MB, has 64 MB of RAM, And is able to output any voltage value in between 0V and 9V.
+
+
 ## sensors
 
  <img width="287" height="176" alt="image" src="https://github.com/user-attachments/assets/a7a2ab79-1aaf-453d-97e2-00a93791542a" />
+ 
+
+<img width="516" height="387" alt="image" src="https://github.com/user-attachments/assets/bcd60725-434a-4d38-abb6-d8eb72f8c5ee" />
+
 
 In the sensors department, we settled on utilising ultrasonic sensors to their full extent. Since we had to make up for not having a camera, we mounted three ultrasonic sensors onto our robot; one on its left, another on its right, and, finally, one at its front. The purpose of these sensors are to quickly detect any obstacles and walls around our car, making it so that it can frequently correct its route and efficiently complete laps.
 
@@ -80,6 +94,9 @@ In the sensors department, we settled on utilising ultrasonic sensors to their f
 
 ## Obstacle program flowchart
 
+This easy-to-follow flowchart gives insight to how our car's code works in simple terms and how it proceeds when it encounters a wall or an obstacle.
+
+
 <img width="473" height="706" alt="image" src="https://github.com/user-attachments/assets/92b06526-cccd-4ed8-b62f-b08c6d17d6a1" />
 
 
@@ -93,6 +110,13 @@ In the sensors department, we settled on utilising ultrasonic sensors to their f
 
 ## Electronics
 
+- X1 Mindstorms EV3 Brick
+- X1 Ultrasonic sensor (Mindstorms EV3 model)
+- X1 Ultrasonic sensor (Mindstorms NXT model)
+- X1 Infrared sensor
+- X1 Large motor
+- X1 Medium motor
+  
 
 ## Structural elements
 
