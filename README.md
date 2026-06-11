@@ -9,7 +9,7 @@ Welcome to the official GitHub repository for Team QuesoVamos from Panama, parti
 
 # Meet the team
 
-Team QuesoVamos is made up by three unlikely friends, united by their shared ambition to step out of their comfort zone and try something new. This is our first time working with Github, BrickLink, and many other unfamiliar software. Even if we don't achieve anything major in the following competition, we'll strive to use what we learned to do a better job in the years to come and go above and beyond what we were capable of doing this time around.
+Team QuesoVamos is made up by three unlikely friends, united by their shared ambition to step out of their comfort zone and try something new. This is our first time working with Github, BrickLink, and many other unfamiliar software. Even if we don't achieve anything major in the following competition, we'll strive to use what we learned to do a better job in the years to come and go above and beyond what we were capable of doing this time around. (maybe add)
 
 # Roles
 
@@ -25,14 +25,14 @@ Christopher Romero: Documentator, Car builder
 
 ## Driving base
 
- Our driving base and chassis are made up completely out of lego, specifically out of the official Lego Mindstorms EV3 Kit. Even though Lego projects bring up small stability and structural issues sometimes, we decided to build in this way for our ease of use and because structural inefficiencies are easy to detect and correct.
+ Our driving base and chassis are made up completely out of lego, specifically out of the official Lego Mindstorms EV3 Kit. Even though Lego projects bring up small stability and structural issues sometimes, we decided to build in this way for our ease of use and because structural inefficiencies are easy to detect and correct. (add)
 
 
 ## Car dimensions
 
 Length: ~28cm (280mm)
 
-Height: 9.5cm (95mm)
+Height: ~9.5cm (95mm)
 
 Width: ~13cm (130mm)
 
@@ -52,14 +52,14 @@ Weight: ~73.61g (0.07361kg)
 
 <img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/a6aa0007-fd3b-4add-a3f9-a1b560aa55e0" />
 
-We used exclusively Lego motors when building our car; one large, and one medium. We used these because they would naturally be ccmpatible with our purely Lego structure and our EV3 brick, and also because they offer a good measure of speed without sacrificing any of our car's stability.
+We used exclusively Lego motors when building our car; one large, and one medium. We used these because they would naturally be ccmpatible with our purely Lego structure and our EV3 brick, and also because they offer a good measure of speed without sacrificing any of our car's stability. (missing exact specs, like torque)
 
 We wanted to install an externally sourced motor system (CQRobot Encoder Motor 12V 330RPM with a gear axle shaft), but we soon realized that the system was incompatible with our project's structure. Because of that and their easy-to-handle nature, we chose to use Lego motors for our car. 
 
  ## Steering mechanism
 
  
-Our project uses a simple Ackerman steering mechanism. Since this our first time competing, we did not want to use an overly complicated steering mechanism; hence why we didn't use something like a steering servo, which we believed to be more complex.
+Our project uses a simple Ackerman steering mechanism. Since this our first time competing, we did not want to use an overly complicated steering mechanism; hence why we didn't use something like a steering servo, which we believed to be more complex. (add)
 
 ## POWER SENSE AND MANAGEMENT
 
@@ -69,7 +69,7 @@ Our project uses a simple Ackerman steering mechanism. Since this our first time
 
 Everything on our car is on the same voltage level. Thanks to this, our EV3 brick can serve as a battery for all of the electrical components in use.
 
-Our ultrasonic sensors use approximately 3.3V each, and our infrared sensor uses the same amount. Our brick can supply power to all of these at once thanks to its 9V output.
+Our ultrasonic sensors use approximately 3.3V each, and our infrared sensor uses the same amount. Our brick can supply power to all of these at once thanks to its 9V output. (add)
 
 ## Controller
 
@@ -78,7 +78,7 @@ Our ultrasonic sensors use approximately 3.3V each, and our infrared sensor uses
 
 For our controller, we used a standard EV3 Lego Mindstorms Brick. Because of this, it also serves as a battery for all of the sensors that our robot utilises.
 
-It sports a flash memory of 16 MB, has 64 MB of RAM, And is able to output any voltage value in between 0V and 9V.
+It sports a flash memory of 16 MB, has 64 MB of RAM, And is able to output any voltage value in between 0V and 9V. (add, be more specific)
 
 
 ## Sensors
@@ -112,7 +112,7 @@ In the sensors department, we settled on utilising ultrasonic sensors to their f
 
 During the obstacle challenge, we use our car's ultrasonic and infrared sensors to detect walls and obstacles nearby. When the sensors detect something, the car will steer clear of it and keep driving forward. Because our robot can also detect the walls of the track, it will know when to turn in order to complete laps,
 
-This process repeats until all laps are completed and the race ends, when the robot will turn itself off.
+This process repeats until all laps are completed and the race ends, when the robot will turn itself off. (add)
 
 
 ## Obstacle program flowchart
