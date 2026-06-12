@@ -74,6 +74,14 @@ We also decided on choosing ultrasonic sensors because of their ease of calibrat
 
 ## 5. Reproducibility                  [Criterion 5]
 ### Bill of Materials                  (~200 chars)
+
+Electronic Materials
+
+- X1 Lego Mindstorms EV3 Brick
+- X1 Lego Mindstorms EV3 Large Motor
+- X1 Lego Mindstorms EV3 Medium Motor
+- X3 Lego Mindstorms EV3 Ultrasonic Sensor
+- 
 ### Build instructions                 (~300 chars)  ← FALTA
 
 ## Vehicle Photos
