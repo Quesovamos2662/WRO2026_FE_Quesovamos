@@ -10,6 +10,8 @@
 
 ## 1. Mobility & Mechanical Design     [Criterion 1]
 ### Driving base & chassis             (~500 chars)
+
+
 ### Motor selection & torque reasoning (~500 chars)  ← FALTA
 ### Steering mechanism (Ackermann)     (~400 chars)  ← AMPLIAR
 ### Chassis iterations                 (~300 chars)  ← FALTA
