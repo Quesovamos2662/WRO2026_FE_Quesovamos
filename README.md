@@ -1,6 +1,7 @@
 <p align="center">
   <img src="img/banner.png" alt="QuesoVamos Banner" width="100%"/>
 </p>
+
 # WRO2026_FE_QuesoVamos
 ## Contents
 
@@ -31,8 +32,6 @@
 - [Team Photos](#team-photos)
 - [Performance Videos](#performance-videos)
 - [Resources](#resources)
-
-<img width="693" height="390" alt="image" src="https://github.com/user-attachments/assets/ba8f6db2-428f-499c-a519-c0c3845c166f" />
 
 
 ## Meet the Team    
