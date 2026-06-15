@@ -1,5 +1,33 @@
 # WRO2026_FE_QuesoVamos
+## Contents
 
+- [Meet the Team](#meet-the-team)
+- [Robot Overview](#robot-overview)
+- [1. Mobility & Mechanical Design](#1-mobility--mechanical-design)
+  - [Driving base & chassis](#driving-base--chassis)
+  - [Motor selection & torque reasoning](#motor-selection--torque-reasoning)
+  - [Steering mechanism](#steering-mechanism-ackermann)
+  - [Chassis iterations](#chassis-iterations)
+- [2. Power & Sensor Architecture](#2-power--sensor-architecture)
+  - [Power supply & EV3 brick specs](#power-supply--ev3-brick-specs)
+  - [Wiring diagram](#wiring-diagram)
+  - [Sensor selection & placement](#sensor-selection--placement)
+  - [Sensor calibration](#sensor-calibration)
+- [3. Software Architecture](#3-software-architecture)
+  - [Algorithm description](#algorithm-description)
+  - [Flowcharts](#flowchart)
+  - [Obstacle & corner handling](#obstacle--corner-handling)
+  - [Tuning process](#tuning-process)
+- [4. Engineering Decisions](#4-engineering-decisions)
+  - [Design decision log](#design-decision-log)
+  - [What didn't work](#what-didnt-work)
+- [5. Reproducibility](#5-reproducibility)
+  - [Bill of Materials](#bill-of-materials)
+  - [Build instructions](#build-instructions)
+- [Vehicle Photos](#vehicle-photos)
+- [Team Photos](#team-photos)
+- [Performance Videos](#performance-videos)
+- [Resources](#resources)
 
 [banner + team photo]
 
