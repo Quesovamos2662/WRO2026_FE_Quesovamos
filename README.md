@@ -346,15 +346,25 @@ complete the steering maneuver before reaching the corner wall.
 
 ## 5. Reproducibility        
 
-### Bill of Materials                  
+### Bill of Materials
 
-Electronic Materials
+### Electronics
 
-- X1 Lego Mindstorms EV3 Brick
-- X1 Lego Mindstorms EV3 Large Motor
-- X1 Lego Mindstorms EV3 Medium Motor
-- X3 Lego Mindstorms EV3 Ultrasonic Sensor
-- 
+| Component | Model | Quantity | Purpose |
+|---|---|---|---|
+| EV3 Intelligent Brick | LEGO Mindstorms 45500 | 1 | Main controller & power supply |
+| Large Motor | LEGO Mindstorms 45502 | 1 | Drive — rear wheels (OUTPUT_B) |
+| Medium Motor | LEGO Mindstorms 45503 | 1 | Steering — front axle (OUTPUT_A) |
+| Ultrasonic Sensor | LEGO Mindstorms EV3 45504 | 2 | Left (INPUT_1) & front (INPUT_2) |
+| Ultrasonic Sensor | LEGO Mindstorms NXT 9846 | 1 | Right wall detection (INPUT_3) |
+| EV3 Rechargeable Battery | LEGO 45501 | 1 | Power source |
+
+### Structural elements
+
+All structural components are sourced from the official LEGO Mindstorms 
+EV3 Core Set (45544). No third-party structural parts are used. The 
+complete parts list is available in models/part-list.pdf.
+
 ### Build instructions                 
 
 ## Vehicle Photos
