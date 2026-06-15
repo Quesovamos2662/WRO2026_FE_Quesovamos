@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="img/banner.png" alt="QuesoVamos Banner" width="100%"/>
+</p>
 # WRO2026_FE_QuesoVamos
 ## Contents
 
