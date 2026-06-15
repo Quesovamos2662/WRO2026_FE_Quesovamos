@@ -367,7 +367,44 @@ All structural components are sourced from the official LEGO Mindstorms
 EV3 Core Set (45544). No third-party structural parts are used. The 
 complete parts list is available in models/part-list.pdf.
 
-### Build instructions                 
+### Build instructions   
+
+**Chassis**
+
+The chassis is built entirely from LEGO Technic beams and connectors 
+included in the EV3 Core Set (45544). The large motor is mounted 
+longitudinally at the rear of the chassis and drives the back axle 
+directly. The EV3 brick is mounted horizontally at the center of the 
+chassis, serving as both the computational unit and the structural 
+backbone of the vehicle.
+
+**Steering**
+
+The front axle uses an Ackermann steering geometry driven by the medium 
+motor. The medium motor is mounted vertically above the front axle and 
+connected to the steering linkage via a LEGO Technic gear. Steering 
+angle is controlled by timed pulses in software rather than by position 
+feedback, so no additional angle sensor is required.
+
+**Sensor placement**
+
+- `INPUT_1` — EV3 Ultrasonic sensor mounted on the left side of the 
+chassis, facing perpendicular to the direction of travel, at 
+approximately mid-chassis height.
+- `INPUT_2` — EV3 Ultrasonic sensor mounted at the front of the vehicle, 
+facing forward along the direction of travel.
+- `INPUT_3` — NXT Ultrasonic sensor mounted on the right side of the 
+chassis, facing perpendicular to the direction of travel, mirroring 
+the left sensor placement.
+
+**Software setup**
+
+1. Install ev3dev on a microSD card following the official guide at 
+[ev3dev.org](https://www.ev3dev.org/docs/getting-started/)
+2. Copy `src/OC_v6.py` to the EV3 brick via SSH or the VS Code ev3dev 
+extension
+3. Run the program: `python3 OC_v6.py`
+4. Place the robot on the track and press the center button to begin
 
 ## Vehicle Photos
 
@@ -389,6 +426,10 @@ complete parts list is available in models/part-list.pdf.
 ## Performance Videos
 
 ## Resources
+- [ev3dev2 documentation](https://ev3dev-lang.readthedocs.io)
+- [WRO Future Engineers 2026 rules](https://wro-association.org)
+- [draw.io — flowchart tool](https://draw.io)
+- [BrickLink Studio — LEGO CAD](https://www.bricklink.com/v3/studio/download.page)
 
 
 
