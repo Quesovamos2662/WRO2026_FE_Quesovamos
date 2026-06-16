@@ -30,7 +30,7 @@
   - [Build instructions](#build-instructions)
 - [Vehicle Photos](#vehicle-photos)
 - [Team Photos](#team-photos)
-- [Performance Videos](#performance-videos)
+- [Performance Video](#performance-videos)
 - [Resources](#resources)
 
 
@@ -446,7 +446,7 @@ extension
 |:---:|:---:|:---:|
 | ![Romina](t-photos/Romina%20pic.jpg) | ![Caylee](t-photos/Caylee%20pic.jpg) | ![Christopher](t-photos/Christopher%20pic.jpg) |
 
-## Performance Videos
+## Performance Video
 
 The following video shows our robot completing an autonomous run on the 
 WRO Future Engineers open challenge track. The robot navigates using its 
