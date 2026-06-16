@@ -435,12 +435,12 @@ extension
 ## Team Photos
 
 ### Group photo
-![Team QuesoVamos](t-photos/group image QV.jpg)
+![Team QuesoVamos](t-photos/group%20image%20QV.jpg)
 
 ### Individual photos
 | Romina | Caylee | Christopher |
 |:---:|:---:|:---:|
-| ![Romina](t-photos/Romina pic.jpg) | ![Caylee](t-photos/Caylee pic.jpg) | ![Christopher](t-photos/Christopher pic.jpg) |
+| ![Romina](t-photos/Romina%20pic.jpg) | ![Caylee](t-photos/Caylee%20pic.jpg) | ![Christopher](t-photos/Christopher%20pic.jpg) |
 
 ## Performance Videos
 
