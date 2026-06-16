@@ -434,6 +434,14 @@ extension
 
 ## Team Photos
 
+### Group photo
+![Team QuesoVamos](t-photos/group image QV.jpg)
+
+### Individual photos
+| Romina | Caylee | Christopher |
+|:---:|:---:|:---:|
+| ![Romina](t-photos/Romina pic.jpg) | ![Caylee](t-photos/Caylee pic.jpg) | ![Christopher](t-photos/Christopher pic.jpg) |
+
 ## Performance Videos
 
 ## Resources
