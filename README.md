@@ -281,10 +281,6 @@ complete the steering maneuver before reaching the corner wall.
 
 ### Bill of Materials
 
-Perfecto, entonces el Bill of Materials de arriba está bien tal como está. Quita esa sección de "Camera and Vision" entera ya que no aplica y no necesitan aclarar nada que no exista — simplemente no se menciona.
-Versión final, lista para pegar:
-markdown## Bill of Materials
-
 ### Electronics
 
 | Component | Model / Part Number | Quantity | Purpose |
@@ -317,12 +313,6 @@ markdown## Bill of Materials
 The complete and detailed parts breakdown, including exact piece counts 
 per build stage, is available as a PDF in `models/finalrobot.pdf`, and 
 the full 3D model file is available in `models/finalrobot.io.zip`.
-
-### Structural elements
-
-All structural components are sourced from the official LEGO Mindstorms 
-EV3 Core Set (45544). No third-party structural parts are used. The 
-complete parts list is available in models/part-list.pdf.
 
 ### Build instructions   
 
