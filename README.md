@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/Banner_QV.png" alt="QuesoVamos Banner" width="100%"/>
+  <img src="img/Banner_GoCheese.png" alt="QuesoVamos Banner" width="100%"/>
 </p>
 
 # WRO2026_FE_QuesoVamos
