@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="img/Banner_GoCheese.png" alt="QuesoVamos Banner" width="100%"/>
+  <img src="img/Banner_GoCheese.png" alt="Go!Cheese Banner" width="100%"/>
 </p>
 
-# WRO2026_FE_QuesoVamos
+# WRO2026_FE_Go!Cheese
 ## Contents
 
 - [Meet the Team](#meet-the-team)
@@ -35,9 +35,9 @@
 
 
 ## Meet the Team    
-Welcome to the official GitHub repository for Team QuesoVamos from Panama, participating in the WRO 2026 San Miguelito Regional in the Future Engineers category, Open Challenge.
+Welcome to the official GitHub repository for Team Go!Cheese from Panama, participating in the WRO 2026 San Miguelito Regional in the Future Engineers category, Open Challenge.
 
-Team QuesoVamos is made up of three unlikely friends who somehow decided that building an autonomous robot, learning GitHub, using BrickLink, programming, documenting, troubleshooting, and surviving WRO all at the same time was a good idea. This is our first time working with many of these tools and technologies, so this repository is not only a place for our source code, materials, and robot documentation, but also proof of our learning process.
+Team Go!Cheese is made up of three unlikely friends who somehow decided that building an autonomous robot, learning GitHub, using BrickLink, programming, documenting, troubleshooting, and surviving WRO all at the same time was a good idea. This is our first time working with many of these tools and technologies, so this repository is not only a place for our source code, materials, and robot documentation, but also proof of our learning process.
 
 Even if we do not achieve something huge in this competition, our goal is to step out of our comfort zone, learn as much as possible, and use this experience to come back stronger in the future. We may be beginners now, but we are determined to improve, keep building, and go beyond what we thought we were capable of.
 
