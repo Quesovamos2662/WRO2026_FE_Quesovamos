@@ -92,8 +92,7 @@ control.
 
 
 
-The medium motor controls the steering through short timed pulses in the code. Instead of using a sensor to track the exact wheel angle, the motor pushes the steering for a set amount of time and then returns it toward center. This kept our system simple and avoided adding extra sensors to 
-our build.
+The medium motor controls the steering through short timed pulses in the code. Instead of using a sensor to track the exact wheel angle, the motor pushes the steering for a set amount of time and then returns it toward center. This kept our system simple and avoided adding extra sensors to our build.
 
 
 ### Chassis iterations               
@@ -118,7 +117,10 @@ For our controller and power supply, we used a standard LEGO Mindstorms EV3 Bric
 
 The brick has 16 MB of flash memory, 64 MB of RAM, and outputs between 
 0V and 9V depending on the component connected. Its rechargeable battery 
-has a maximum capacity of 2000 mAh. To decompose our power usage, our three ultrasonic sensors consume approximately 3.3V each at low current, and our two motors consume the most power during movement and recovery maneuvers. Running all five components simultaneously stays well within the brick's output capacity. However, during early testing sessions we experienced several unexpected shutdowns mid-run, not due to hardware failure, but 
+has a maximum capacity of 2000 mAh. To decompose our power usage, our three ultrasonic sensors consume approximately 3.3V each at low current, and our two motors consume the most power during movement and recovery maneuvers. Running all five components simultaneously stays well within the brick's output capacity. 
+
+(delete maybe)
+However, during early testing sessions we experienced several unexpected shutdowns mid-run, not due to hardware failure, but 
 because we neglected to fully charge the battery before testing. This taught us to treat battery management as part of our testing routine, and we made it a standard practice to verify battery level on the EV3 display before every run. After adopting this habit, we did not experience any further power interruptions during testing.
 
 ### Wiring diagram  
@@ -131,8 +133,7 @@ The diagram below shows how all sensors and motors connect to the EV3 brick. Ult
 For our sensor setup, we decided to use three ultrasonic sensors: one 
 on the left side, one on the right side, and one at the front of the robot. Since we do not have a camera, these sensors are responsible for all of our robot's awareness.
 
-We chose ultrasonic sensors over other options like infrared sensors because they are more reliable at measuring distance accurately and are 
-less affected by lighting conditions or surface color. They are also more straightforward to calibrate, since their output is a direct distance reading in centimeters rather than a relative proximity value.
+We chose ultrasonic sensors over other options like infrared sensors because they are more reliable at measuring distance accurately and are less affected by lighting conditions or surface color. They are also more straightforward to calibrate, since their output is a direct distance reading in centimeters rather than a relative proximity value.
 
 The left and right sensors are mounted at mid-chassis height on each side. This placement allows them to detect the track walls consistently as the robot moves forward. The front sensor is mounted at the front of the chassis and faces forward. It is responsible for detecting upcoming walls and triggering 
 corner navigation. 
@@ -155,20 +156,15 @@ library, and runs directly on the EV3 brick. Instead of using a camera or
 color sensors, our robot relies entirely on distance readings from its three 
 ultrasonic sensors to make decisions. The program checks four conditions every cycle, in order of urgency, and reacts to whichever one applies first.
 
-Once the robot completes three laps, or once 99 seconds have passed 
-since the run started, the program stops the motors automatically. 
+Once the robot completes three laps, or once 99 seconds have passed since the run started, the program stops the motors automatically. 
+
 The time limit works as a timed parking mechanism — after testing 
 multiple full runs, we found that 99 seconds consistently brings 
-the robot back close to its starting position after finishing the 
-required laps.
+the robot back close to its starting position after finishing the required laps.
 
 A key feature of the algorithm is *turn direction locking* (TURN_DIR). The first time the robot naturally navigates a corner (front wall detected at warn range), it records whether it steered left or right and locks that direction for the entire run. Since all four corners of a WRO track share the same handedness, this guarantees that every subsequent corner and every recovery always steers the robot back into the correct lane.
 
-To keep track of laps, the program counts corners. Every time the front 
-sensor goes from detecting a wall closer than 70 cm to reading open space 
-again above 90 cm, the program registers that a corner was passed. Once 
-4 corners are counted, one full lap is complete. After 3 laps, the robot 
-stops automatically.
+To keep track of laps, the program counts corners. Every time the front sensor goes from detecting a wall closer than 70 cm to reading open space again above 90 cm, the program registers that a corner was passed. Once 4 corners are counted, one full lap is complete. After 3 laps, the robot stops automatically.
 
 ### Flowchart                         
 
@@ -206,41 +202,25 @@ move forward.
 **P4: Front wall approaching:** If the front sensor reads below 55 cm, 
 the robot steers using the locked turn direction (TURN_DIR). If this is 
 the first corner the robot has encountered and TURN_DIR has not been set 
-yet, the robot picks the side with more open space and locks that 
-direction for the rest of the run.
+yet, the robot picks the side with more open space and locks that direction for the rest of the run.
 
 To avoid the robot overcorrecting repeatedly, a cooldown of 0.50 seconds 
-is applied after every P2, P3, and P4 correction. P1 always bypasses 
-this cooldown. Additionally, all sensor readings are passed through a 
-median-of-3 filter every cycle to reduce false triggers caused by noise 
+is applied after every P2, P3, and P4 correction. P1 always bypasses this cooldown. Additionally, all sensor readings are passed through a median-of-3 filter every cycle to reduce false triggers caused by noise 
 or reflections.
 
 
 ### Tuning process                     
 
-The distance thresholds and timing values in our code were not chosen 
-arbitrarily — they were the result of repeated physical testing on a 
-mock track built to approximate the WRO layout.
+The distance thresholds and timing values in our code were not chosen arbitrarily — they were the result of repeated physical testing on a mock track built to approximate the WRO layout.
 
-Our first issue was that the robot was entering corners too late. With 
-the front sensor warn threshold set to 35 cm, the robot did not have 
-enough time to begin turning before it reached the wall, which caused it 
-to clip the outer corner consistently. We gradually raised the threshold 
-in 5 cm increments during testing until we reached 55 cm, which gave the 
-robot enough advance warning to complete the turn cleanly.
+Our first issue was that the robot was entering corners too late. With the front sensor warn threshold set to 35 cm, the robot did not have enough time to begin turning before it reached the wall, which caused it to clip the outer corner consistently. We gradually raised the threshold in 5 cm increments during testing until we reached 55 cm, which gave the robot enough advance warning to complete the turn cleanly.
 
 Our second issue was oscillation on straight sections. In our first 
 version of the loop, a correction fired every single cycle whenever a 
 sensor read below its warn threshold. This caused the robot to zigzag 
-continuously down the straight sections instead of holding a steady 
-path. We solved this by introducing a 0.50 second cooldown after every 
-correction, which gave the robot time to evaluate whether the correction 
-had worked before firing another one.
+continuously down the straight sections instead of holding a steady path. We solved this by introducing a 0.50 second cooldown after every correction, which gave the robot time to evaluate whether the correction had worked before firing another one.
 
-The 99 second run time limit was also the result of physical testing. 
-We timed several complete runs and measured where the robot ended up 
-after each one. We adjusted the timer until the robot stopped 
-consistently close to its starting position, which we used as our 
+The 99 second run time limit was also the result of physical testing. We timed several complete runs and measured where the robot ended up after each one. We adjusted the timer until the robot stopped consistently close to its starting position, which we used as our 
 parking point.
 
 ## 4. Engineering Decisions           
@@ -252,36 +232,21 @@ against our constraints as first-time competitors with limited experience
 and a fixed timeline. This section documents the reasoning behind our most 
 significant decisions.
 
-Instead of using a sensor to detect the starting zone for parking, 
-we chose a time-based approach. After running the robot multiple times 
-and measuring how long a full three-lap run took, we set a 99 second 
-limit that reliably stops the robot near its starting position. This 
+Instead of using a sensor to detect the starting zone for parking, we chose a time-based approach. After running the robot multiple times and measuring how long a full three-lap run took, we set a 99 second limit that reliably stops the robot near its starting position. This 
 was simpler to implement and worked consistently during our tests.
 
 *EV3 over Arduino*
 
 Early in the planning phase, we considered building the robot around an 
-Arduino microcontroller, as it initially seemed like a flexible option for 
-connecting multiple components. However, we quickly determined that Arduino 
+Arduino microcontroller, as it initially seemed like a flexible option for connecting multiple components. However, we quickly determined that Arduino 
 was not the right fit for our team at this stage. As first-time competitors 
-with no prior robotics experience, the process of wiring individual 
-components, managing voltage levels, writing low-level driver code, and 
-debugging hardware connections within our available time was beyond what we 
-could realistically execute. The LEGO Mindstorms EV3 ecosystem offered a 
-fully integrated solution — motors, sensors, brick, and software all 
-designed to work together — which allowed us to focus our limited time on 
-solving the actual navigation problem rather than on hardware setup.
+with no prior robotics experience, the process of wiring individual components, managing voltage levels, writing low-level driver code, and debugging hardware connections within our available time was beyond what we could realistically execute. The LEGO Mindstorms EV3 ecosystem offered a fully integrated solution — motors, sensors, brick, and software all designed to work together — which allowed us to focus our limited time on solving the actual navigation problem rather than on hardware setup.
 
 *Three ultrasonics over two*
 
 Our initial sensor layout used only two ultrasonic sensors on the left and 
 right sides of the vehicle. During early testing we identified a blind spot 
-directly in front of the robot — the side sensors could not detect a wall 
-ahead until the robot was already too close to correct in time. This led us 
-to add a third ultrasonic sensor facing forward, which became the primary 
-trigger for corner detection and is responsible for the UF_WARN (55 cm) 
-threshold that gives the robot enough time to begin steering before reaching 
-the wall.
+directly in front of the robot — the side sensors could not detect a wall ahead until the robot was already too close to correct in time. This led us to add a third ultrasonic sensor facing forward, which became the primary trigger for corner detection and is responsible for the UF_WARN (55 cm) threshold that gives the robot enough time to begin steering before reaching the wall.
 
 *Medium motor for steering over a servo*
 
@@ -289,35 +254,19 @@ We considered using a servo motor for the Ackermann steering mechanism, as
 servos are commonly used in RC car designs for precise angle control. 
 However, given our fully LEGO-based chassis, integrating an external servo 
 would have required custom mounting solutions and additional wiring outside 
-the EV3 ecosystem. The EV3 medium motor provided sufficient steering 
-response through timed pulses and remained fully compatible with our 
-structure and ev3dev2 library.
+the EV3 ecosystem. The EV3 medium motor provided sufficient steering response through timed pulses and remained fully compatible with our structure and ev3dev2 library.
 
 ### What didn't work       
 
 *Infrared sensor as front obstacle detector*
 
 Our original design used an infrared sensor mounted at the front of the 
-robot to detect the distance between the vehicle and the wall ahead. In 
-theory, the infrared sensor offered a narrower detection beam than an 
-ultrasonic sensor, which we believed would reduce false positives from 
-angled surfaces. In practice, the sensor performed poorly under repeated 
-collision conditions — after several impacts during testing, its readings 
-became inconsistent and unreliable, causing the robot to either fail to 
-detect walls or trigger corrections at incorrect distances. We replaced it 
-with a third ultrasonic sensor (EV3 model, INPUT_2), which proved 
+robot to detect the distance between the vehicle and the wall ahead. In theory, the infrared sensor offered a narrower detection beam than an ultrasonic sensor, which we believed would reduce false positives from angled surfaces. In practice, the sensor performed poorly under repeated collision conditions — after several impacts during testing, its readings became inconsistent and unreliable, causing the robot to either fail to detect walls or trigger corrections at incorrect distances. We replaced it with a third ultrasonic sensor (EV3 model, INPUT_2), which proved 
 significantly more robust and consistent across all testing sessions.
 
 *Threshold-based steering without cooldown*
 
-Our first version of the navigation loop fired a steering correction every 
-single cycle whenever a sensor read below its warn threshold. This caused 
-the robot to oscillate violently in straight sections — it would correct 
-right, then immediately correct left on the next cycle, then right again, 
-producing a zigzag pattern instead of a straight line. Introducing a 0.50 
-second cooldown after each correction (STEER_COOLDOWN) resolved the 
-oscillation entirely and allowed the robot to maintain a stable forward 
-trajectory between corrections.
+Our first version of the navigation loop fired a steering correction every single cycle whenever a sensor read below its warn threshold. This caused the robot to oscillate violently in straight sections — it would correct right, then immediately correct left on the next cycle, then right again, producing a zigzag pattern instead of a straight line. Introducing a 0.50 second cooldown after each correction (STEER_COOLDOWN) resolved the oscillation entirely and allowed the robot to maintain a stable forward trajectory between corrections.
 
 *Fixed front warn threshold of 35 cm*
 
@@ -353,20 +302,14 @@ complete parts list is available in models/part-list.pdf.
 
 **Chassis**
 
-The chassis is built entirely from LEGO Technic beams and connectors 
-included in the EV3 Core Set (45544). The large motor is mounted 
-longitudinally at the rear of the chassis and drives the back axle 
+The chassis is built entirely from LEGO Technic beams and connectors included in the EV3 Core Set (45544). The large motor is mounted longitudinally at the rear of the chassis and drives the back axle 
 directly. The EV3 brick is mounted horizontally at the center of the 
 chassis, serving as both the computational unit and the structural 
 backbone of the vehicle.
 
 **Steering**
 
-The front axle uses an Ackermann steering geometry driven by the medium 
-motor. The medium motor is mounted vertically above the front axle and 
-connected to the steering linkage via a LEGO Technic gear. Steering 
-angle is controlled by timed pulses in software rather than by position 
-feedback, so no additional angle sensor is required.
+The front axle uses an Ackermann steering geometry driven by the medium motor. The medium motor is mounted vertically above the front axle and connected to the steering linkage via a LEGO Technic gear. Steering angle is controlled by timed pulses in software rather than by position feedback, so no additional angle sensor is required.
 
 **Sensor placement**
 
