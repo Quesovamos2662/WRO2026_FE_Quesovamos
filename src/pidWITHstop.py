@@ -65,7 +65,7 @@ sleep(0.2)
 # More negative = faster forward on your robot.
 # Faster-steering version. Sensor delay is unchanged; emergency stays slow.
 
-SPEED_FAST          = -100
+SPEED_FAST          = 200
 SPEED_PID           = -100
 SPEED_PID_CAUTION   = -88
 SPEED_WALL_GUARD    = -74
@@ -106,9 +106,9 @@ FRONT_EMERGENCY_CM = 58
 # Wall guard is NOT emergency. It is a strong normal correction layer
 # that should handle most wall approaches before emergency is needed.
 WALL_GUARD_CM        = 88
-WALL_GUARD_STRONG_CM = 68
+WALL_GUARD_STRONG_CM = 96
 
-SIDE_GENTLE_CM = 145
+SIDE_GENTLE_CM = 14
 SIDE_MEDIUM_CM = 108
 SIDE_STRONG_CM = 76
 
@@ -128,7 +128,7 @@ BLIND_SIDE_THRESHOLD = 180
 # Ultrasonic sensors can freeze / repeat bad values if read too fast.
 # 0.015 was stable in your successful tests.
 
-SENSOR_GAP_MS = 0.015
+SENSOR_GAP_MS = 0.010
 
 # Early warning prediction:
 # If a sensor value drops fast between loops, use a slightly smaller
