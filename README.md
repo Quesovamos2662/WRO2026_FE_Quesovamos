@@ -131,9 +131,9 @@ power the full system simultaneously. Since the EV3 brick supplies all
 five components (three sensors and two motors) from a single 2000 mAh 
 source, a partially depleted battery does not cause the robot to fail 
 outright, but it does reduce motor torque and steering responsiveness 
-enough to affect navigation accuracy. Because of this, we treat a fully 
-charged battery as a requirement for every competition run, not just a 
-best practice.
+enough to affect navigation accuracy. This is because we use a PID system (Proportional-Integral-Derivative), which relies heavily on the power our robot is supplied with. Thankfully, the EV3 brick has a respectable and sufficient power output, which makes our PID system workable. Even though using other batteries could prove to be more efficient, an EV3 brick works just fine. However, if we get more time to tinker and develop our robot, we might switch the brick out for a battery for the reason of efficiency.
+
+
 
 ### Wiring diagram  
 
