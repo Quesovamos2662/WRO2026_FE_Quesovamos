@@ -101,16 +101,11 @@ regardless of small variations in motor speed or friction.
 Our robot went through one major structural redesign between its first 
 and final version.
 
-In the original design, the EV3 brick was mounted vertically at the center of the chassis, with the sensor ports facing sideways. The two ultrasonic sensors were placed at the rear of the robot, pointing 
-outward to the sides. This made the robot significantly taller and placed most of its weight near the back, which made it unstable during turns and caused the front wheels to lose grip on the track 
-surface. The rear sensor placement also created a large blind spot at the front of the robot, since there was no sensor covering what was directly ahead.
+In the original design, the EV3 brick was mounted horizontally at the center of the chassis, with starting button facing the front of the robot. The orientation in which the EV3 was placed made it hard to access the starting button of the EV3. Initially, the chassis was more compact and smaller. Because we wanted the car to be as swift as possible, we thought of that decision. We also worked on building the Ackermann steering geometry, but when placing the medium motor to test the steering, we noticed the motor had a hard time to position the whole geometry. It used a technic liftarm 1 x 3, some technic pins, and a 3L axle with stop. The pins and the technic liftarm didn't allow for flexible movement, so we had to scratch it from our plans. When we worked on the original design, we also planned on using wheels of the same side for both the front and rear motors. Overall, the first design was unstable and rigid. This was because we made the design in the BrickLink modeling software before building it physically using the LEGO MINDSTORMS kits.
 
-For the final version, we rebuilt the chassis with the EV3 brick mounted 
-horizontally, which made the robot more compact and stable. The ultrasonic sensors were moved to the sides of the 
-chassis at mid-height to better align with the track walls, and a third 
-sensor was added facing forward to eliminate the front blind spot.
+For the final version, we rebuilt the chassis with the EV3 brick mounted horizontally but rotated around so that the buttons and display of the EV3 were facing the large motor at the back. Since there was more space between the EV3 brick and the large motor, our hands could easily reach the buttons. We also lengthened the chassis on the front. This sacrificed our idea of a smaller chassis with higher speed, but gave us more stability. To do that, we had to add several more structures that were able to hold the longer technical liftarms at the front. We also added some support on the sides of the medium motor at the front, so the motor would not be moving aggresively from side to side while steering and potentially cause us more trouble when testing. We switched a technic liftarm 1 x 3 with a connector with pin alongside an 3L axle with stop to fix the rigid movement of the steering mechanism. We added support to the large motor, it would stay straight and keep the tires tight against it. Additionally, the rear tires were changed to a bigger size. For reference, we were using 13.2 x 22 ZR sized tires on both front and rear, but after seeing the unsteadiness of the overall chassis, we changed the rear tires to some sized 56 x 28 ZR. It is worth mentioning that we added more technical pins and connectors than expected. When we recreated the virtual model using the kits, we found out that most structures of the modeled chassis had a lot of problems with connections and stability.
 
-Here is a table adjunct showing the difference between both steering mechanisms:
+Here is an image adjunct showing the difference between both steering mechanisms and planned front of the chassis:
 ![Steering comparison](v-photos/Steering_comparison.png)
 
 
