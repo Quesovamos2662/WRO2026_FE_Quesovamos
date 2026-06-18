@@ -50,7 +50,7 @@ Our vehicle is a robot built entirely from LEGO Mindstorms EV3 components. It us
 | Length | ~28 cm (280 mm) |
 | Height | ~9.5 cm (95 mm) |
 | Width | ~13 cm (130 mm) |
-| Weight | ~73.61 g (0.07361 kg) |
+| Weight | ~703.61 g (0.7361 kg) |
 | Controller | LEGO Mindstorms EV3 Brick |
 | Drive motor | EV3 Large Motor (OUTPUT_B) |
 | Steering motor | EV3 Medium Motor (OUTPUT_A) |
