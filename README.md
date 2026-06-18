@@ -194,6 +194,8 @@ For the side sensors, we tested different WARN distances until we found 20 cm as
 that consistently allowed the robot to begin turning before reaching the corner wall. These values are defined as constants at the top of our code and can be adjusted if the robot is used on a track with different 
 wall spacing.
 
+Additionally, we took into consideration the interferences caused by noise while testing. Fortunately, during our test attempts, the place we chose was relatively quiet most of the time, and the tests would carry out flawlessly. If we accidentally spoke a little bit higher than usual, the sensors performance would drop just a bit, but it is enough to make the robot crash against a wall. Another notable issue was the removal of the sensor start delay in the code. Essentially, this line of code told the sensors how much time to wait before starting. We forgot adding such line, so the sensors started measuring before the code ever gave the instructions, leading to an infinite loop of freezing and restartting. Beside those easily fixable issues, we could say that there were minimal interferences when testing.
+
 ## 3. Software Architecture            
 
 ### Algorithm description
