@@ -166,6 +166,10 @@ in the wall guard and emergency layers (`SIDE_EMERGENCY_CM = 48`,
 `WALL_GUARD_CM = 88`), since a robot can be too close to one wall while 
 still being far from the other.
 
+| Old front view | New front view (sensors active) |
+|:---:|:---:|
+| ![Old front](v-photos/front_old.jpg) | ![Sensor placement front](v-photos/sensor_placement_front.jpg) |
+
 The front sensor is mounted facing forward and has a completely 
 different job from the side sensors: it does not feed the PID controller 
 at all. Instead, it exclusively drives the corner detection logic. Three 
