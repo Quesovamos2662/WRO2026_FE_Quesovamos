@@ -122,9 +122,18 @@ The brick has 16 MB of flash memory, 64 MB of RAM, and outputs between
 0V and 9V depending on the component connected. Its rechargeable battery 
 has a maximum capacity of 2000 mAh. To decompose our power usage, our three ultrasonic sensors consume approximately 3.3V each at low current, and our two motors consume the most power during movement and recovery maneuvers. Running all five components simultaneously stays well within the brick's output capacity. 
 
-(delete maybe)
-However, during early testing sessions we experienced several unexpected shutdowns mid-run, not due to hardware failure, but 
+During early testing sessions we experienced several unexpected shutdowns mid-run, not due to hardware failure, but 
 because we neglected to fully charge the battery before testing. This taught us to treat battery management as part of our testing routine, and we made it a standard practice to verify battery level on the EV3 display before every run. After adopting this habit, we did not experience any further power interruptions during testing.
+
+This experience also reinforced an important operating constraint: the 
+robot only performs reliably when the battery has sufficient charge to 
+power the full system simultaneously. Since the EV3 brick supplies all 
+five components (three sensors and two motors) from a single 2000 mAh 
+source, a partially depleted battery does not cause the robot to fail 
+outright, but it does reduce motor torque and steering responsiveness 
+enough to affect navigation accuracy. Because of this, we treat a fully 
+charged battery as a requirement for every competition run, not just a 
+best practice.
 
 ### Wiring diagram  
 
@@ -169,6 +178,14 @@ separate front distances (`FRONT_GENTLE_CM = 235`, `FRONT_MEDIUM_CM = 178`,
 `FRONT_STRONG_CM = 128`) let the program distinguish between a corner 
 that is still far away and one that is immediately ahead, responding 
 with a proportionally gentler or stronger turn.
+
+The images below show each ultrasonic sensor active and mounted on the 
+robot: the front sensor facing forward, and the left and right sensors 
+facing outward perpendicular to the direction of travel.
+
+| Front sensor | Left sensor | Right sensor |
+|:---:|:---:|:---:|
+| ![Front sensor](v-photos/sensor_placement_front.jpg) | ![Left sensor](v-photos/sensor_placement_left.jpg) | ![Right sensor](v-photos/sensor_placement_right.jpg) |
 
 ### Sensor calibration              
 
