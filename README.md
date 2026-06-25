@@ -492,7 +492,7 @@ extension
 ## Team Photos
 
 ### Group photo
-![Team GoCheese](t-photos/group%20image%20QV.jpg)
+
 
 ### Individual photos
 | Romina | Caylee |
