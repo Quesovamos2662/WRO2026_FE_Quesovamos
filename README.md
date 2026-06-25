@@ -495,9 +495,9 @@ extension
 ![Team GoCheese](t-photos/group%20image%20QV.jpg)
 
 ### Individual photos
-| Romina | Caylee | Christopher |
-|:---:|:---:|:---:|
-| ![Romina](t-photos/Romina%20pic.jpg) | ![Caylee](t-photos/Caylee%20pic.jpg) | ![Christopher](t-photos/Christopher%20pic.jpg) |
+| Romina | Caylee |
+|:---:|:---:|
+| ![Romina](t-photos/Romina%20pic.jpg) | ![Caylee](t-photos/Caylee%20pic.jpg) |
 
 ## Performance Video
 
